@@ -1,0 +1,9 @@
+%p#notice= notice
+%h1 Messages
+.contents
+  .js-message-errors
+  = form_with(model: @message, class: 'js-form') do |f|
+    = f.text_field :body
+    = f.submit
+  %ul.messages
+    = render @messages

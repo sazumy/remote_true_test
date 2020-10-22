@@ -1,0 +1,6 @@
+- if instance.errors.full_messages.present?
+  .validates.js-message-errors
+    %ul
+      - instance.errors.full_messages.each do |msg|
+        %li{ style: "color: #bb4a4a;"}
+          = msg
